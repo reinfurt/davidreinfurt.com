@@ -1,5 +1,9 @@
 <?
-$file = 'media/David-Reinfurt.pdf';
+if (isset($_GET['file']))
+    $file = 'media/' . $_GET['file'];
+else 
+    $file = 'media/David-Reinfurt.pdf';
+
 force_download($file);
 
 function force_download ($file) {    
